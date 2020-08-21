@@ -1,12 +1,10 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import {useRouter} from 'next/router'
-import AppLayout from '../components/AppLayout'
-// devit
+import Head from "next/head";
+import AppLayout from "../components/AppLayout";
+import { colors } from "../styles/theme";
+import Button from "../components/Button";
+import GitHub from "../components/Icons/GitHub";
 
 export default function Home() {
-  const router = useRouter()
-
   return (
     <>
       <Head>
@@ -15,39 +13,47 @@ export default function Home() {
       </Head>
 
       <AppLayout>
-        <h1>
-          <a href="https://nextjs.org">devter</a>
-        </h1>
-        <nav>
-          <Link href='/timeline'>
-            <a>
-              timeline
-            </a>
-          </Link>
-        </nav>
+        <section>
+          <img src="/devter-logo.png" alt="logo" />
+          <h1>Devter</h1>
+          <h2>Talk about development with developers 👩‍💻👨‍💻</h2>
+          <div>
+            <Button>
+              <GitHub fill={"#fff"} width={24} height={24} />
+              Login with Github
+            </Button>
+          </div>
+        </section>
       </AppLayout>
 
       <style jsx>{`
+        section {
+          display: grid;
+          height: 100%;
+          place-content: center;
+          place-items: center;
+        }
+
+        div {
+          margin-top: 16px;
+        }
+
+        img {
+          width: 120px;
+        }
+
         h1 {
-          text-align: center;
-          font-size: 48px;
+          color: ${colors.primary};
+          font-weight: 800;
+          margin-bottom: 16px;
         }
 
-        nav {
-          font-size: 24px;
-          text-align: center;
-        }
-
-        .another-title {
-          color: #333;
-          font-size: 24px;
-        }
-
-        a {
-          color: orange;
-          text-decoration: none;
+        h2 {
+          color: ${colors.secondary};
+          font-size: 21px;
+          margin: 0;
         }
       `}</style>
     </>
-  )
+  );
 }
