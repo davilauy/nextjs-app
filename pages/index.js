@@ -7,6 +7,7 @@ import AppLayout from "components/AppLayout"
 import Avatar from "components/Avatar"
 import Button from "components/Button"
 import GitHub from "components/Icons/GitHub"
+import Logo from "components/Icons/Logo"
 
 import { colors } from "styles/theme"
 
@@ -34,7 +35,7 @@ export default function Home() {
 
       <AppLayout>
         <section>
-          <img src="/devter-logo.png" alt="Logo" />
+          <Logo width="100" />
           <h1>Devter</h1>
           <h2>
             Talk about development
@@ -43,7 +44,7 @@ export default function Home() {
           </h2>
 
           <div>
-            {user === undefined && (
+            {user === null && (
               <Button onClick={handleClick}>
                 <GitHub fill="#fff" width={24} height={24} />
                 Login with GitHub
@@ -76,12 +77,13 @@ export default function Home() {
           place-items: center;
         }
         h1 {
-          color: ${colors.secondary};
+          color: ${colors.primary};
+          font-size: 32px;
           font-weight: 800;
           margin-bottom: 16px;
         }
         h2 {
-          color: ${colors.primary};
+          color: ${colors.secondary};
           font-size: 21px;
           margin: 0;
         }
