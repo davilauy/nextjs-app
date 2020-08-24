@@ -29,7 +29,7 @@ const timeline = [
   Clean Code es un libro obsoleto que en 2020, con los paradigmas de desarrollo de software que manejamos, puede hacerte más daño que beneficio.`,
   },
   {
-    id: "0",
+    id: "3",
     avatar:
       "https://pbs.twimg.com/profile_images/1274822387532328960/feySZs0k_reasonably_small.jpg",
     username: "wongmjane",
@@ -40,7 +40,7 @@ const timeline = [
   * Chrome 79+, Safari 14+, Firefox 68+`,
   },
   {
-    id: "1",
+    id: "4",
     avatar:
       "https://pbs.twimg.com/profile_images/1083714591752941568/Q7LnIANs_reasonably_small.jpg",
     username: "midudev",
@@ -48,7 +48,7 @@ const timeline = [
     name: "Miguel Ángel Durán",
   },
   {
-    id: "2",
+    id: "5",
     username: "d4nidev",
     name: "Daniel de la Cruz",
     avatar:
@@ -58,7 +58,7 @@ const timeline = [
   Clean Code es un libro obsoleto que en 2020, con los paradigmas de desarrollo de software que manejamos, puede hacerte más daño que beneficio.`,
   },
   {
-    id: "0",
+    id: "6",
     avatar:
       "https://pbs.twimg.com/profile_images/1274822387532328960/feySZs0k_reasonably_small.jpg",
     username: "wongmjane",
@@ -69,7 +69,7 @@ const timeline = [
   * Chrome 79+, Safari 14+, Firefox 68+`,
   },
   {
-    id: "1",
+    id: "7",
     avatar:
       "https://pbs.twimg.com/profile_images/1083714591752941568/Q7LnIANs_reasonably_small.jpg",
     username: "midudev",
@@ -77,7 +77,7 @@ const timeline = [
     name: "Miguel Ángel Durán",
   },
   {
-    id: "2",
+    id: "8",
     username: "d4nidev",
     name: "Daniel de la Cruz",
     avatar:
@@ -87,7 +87,7 @@ const timeline = [
   Clean Code es un libro obsoleto que en 2020, con los paradigmas de desarrollo de software que manejamos, puede hacerte más daño que beneficio.`,
   },
   {
-    id: "0",
+    id: "9",
     avatar:
       "https://pbs.twimg.com/profile_images/1274822387532328960/feySZs0k_reasonably_small.jpg",
     username: "wongmjane",
@@ -98,7 +98,7 @@ const timeline = [
   * Chrome 79+, Safari 14+, Firefox 68+`,
   },
   {
-    id: "1",
+    id: "10",
     avatar:
       "https://pbs.twimg.com/profile_images/1083714591752941568/Q7LnIANs_reasonably_small.jpg",
     username: "midudev",
@@ -106,7 +106,7 @@ const timeline = [
     name: "Miguel Ángel Durán",
   },
   {
-    id: "2",
+    id: "11",
     username: "d4nidev",
     name: "Daniel de la Cruz",
     avatar:
@@ -116,7 +116,7 @@ const timeline = [
   Clean Code es un libro obsoleto que en 2020, con los paradigmas de desarrollo de software que manejamos, puede hacerte más daño que beneficio.`,
   },
   {
-    id: "0",
+    id: "12",
     avatar:
       "https://pbs.twimg.com/profile_images/1274822387532328960/feySZs0k_reasonably_small.jpg",
     username: "wongmjane",
@@ -127,7 +127,7 @@ const timeline = [
   * Chrome 79+, Safari 14+, Firefox 68+`,
   },
   {
-    id: "1",
+    id: "13",
     avatar:
       "https://pbs.twimg.com/profile_images/1083714591752941568/Q7LnIANs_reasonably_small.jpg",
     username: "midudev",
@@ -135,7 +135,7 @@ const timeline = [
     name: "Miguel Ángel Durán",
   },
   {
-    id: "2",
+    id: "14",
     username: "d4nidev",
     name: "Daniel de la Cruz",
     avatar:
