@@ -2,12 +2,13 @@ import { useEffect } from "react"
 import { useRouter } from "next/router"
 import Head from "next/head"
 
-import { loginWithGitHub } from "firebase/client"
+import { loginWithGitHub, loginWithGoogle } from "firebase/client"
 import useUser, { USER_STATES } from "hooks/useUser"
 
 import AppLayout from "components/AppLayout"
 import Button from "components/Button"
 import GitHub from "components/Icons/GitHub"
+import Google from "components/Icons/Google"
 import Logo from "components/Icons/Logo"
 
 import { colors } from "styles/theme"
@@ -20,8 +21,14 @@ export default function Home() {
     user && router.replace("/home")
   }, [user])
 
-  const handleClick = () => {
+  const handleLoginGitHub = () => {
     loginWithGitHub().catch((err) => {
+      console.log(err)
+    })
+  }
+
+  const handleLoginGoogle = () => {
+    loginWithGoogle().catch((err) => {
       console.log(err)
     })
   }
@@ -45,10 +52,16 @@ export default function Home() {
 
           <div>
             {user === USER_STATES.NOT_LOGGED && (
-              <Button onClick={handleClick}>
-                <GitHub fill="#fff" width={24} height={24} />
-                Login with GitHub
-              </Button>
+              <>
+                <Button onClick={handleLoginGitHub}>
+                  <GitHub fill="#fff" width={24} height={24} />
+                  Login with GitHub
+                </Button>
+                <Button onClick={handleLoginGoogle}>
+                  <Google fill="#4285F4" width={24} height={24} />
+                  Login with Google
+                </Button>
+              </>
             )}
             {user === USER_STATES.NOT_KNOWN && (
               <img src="/spinner.gif" alt="Loading..." />

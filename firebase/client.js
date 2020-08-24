@@ -38,6 +38,11 @@ export const loginWithGitHub = () => {
   return firebase.auth().signInWithPopup(githubProvider)
 }
 
+export const loginWithGoogle = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider()
+  return firebase.auth().signInWithPopup(googleProvider)
+}
+
 export const addDevit = ({ avatar, content, userId, userName }) => {
   return database.collection("devits").add({
     avatar,
