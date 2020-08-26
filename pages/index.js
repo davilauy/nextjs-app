@@ -1,6 +1,7 @@
 import { useEffect } from "react"
-import { useRouter } from "next/router"
+
 import Head from "next/head"
+import { useRouter } from "next/router"
 
 import { loginWithGitHub, loginWithGoogle } from "firebase/client"
 import useUser, { USER_STATES } from "hooks/useUser"
@@ -52,7 +53,7 @@ export default function Home() {
 
           <div>
             {user === USER_STATES.NOT_LOGGED && (
-              <>
+              <div>
                 <Button onClick={handleLoginGitHub}>
                   <GitHub fill="#fff" width={24} height={24} />
                   Login with GitHub
@@ -61,7 +62,7 @@ export default function Home() {
                   <Google fill="#4285F4" width={24} height={24} />
                   Login with Google
                 </Button>
-              </>
+              </div>
             )}
             {user === USER_STATES.NOT_KNOWN && (
               <img src="/spinner.gif" alt="Loading..." />
@@ -76,6 +77,9 @@ export default function Home() {
         }
         div {
           margin-top: 16px;
+        }
+        div > :global(button) {
+          margin: 10px;
         }
         section {
           display: grid;

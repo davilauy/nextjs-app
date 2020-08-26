@@ -43,15 +43,16 @@ export const loginWithGoogle = () => {
   return firebase.auth().signInWithPopup(googleProvider)
 }
 
-export const addDevit = ({ avatar, content, userId, userName }) => {
+export const addDevit = ({ avatar, content, img, userId, userName }) => {
   return database.collection("devits").add({
     avatar,
     content,
-    userId,
-    userName,
     createdAt: firebase.firestore.Timestamp.fromDate(new Date()),
+    img,
     likesCount: 0,
     sharedCount: 0,
+    userId,
+    userName,
   })
 }
 
@@ -73,4 +74,10 @@ export const fetchLatestDevits = () => {
         }
       })
     })
+}
+
+export const uploadImage = (file) => {
+  const ref = firebase.storage().ref(`images/${file.name}`)
+  const task = ref.put(file)
+  return task
 }
